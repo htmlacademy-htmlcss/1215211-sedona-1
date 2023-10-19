@@ -1,0 +1,859 @@
+/* ПОДКЛЮЧЕНИЕ ШРИФТОВ */
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2");
+  font-display: swap;
+}
+
+/* ГЛОБАЛЬНЫЕ СТИЛИ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ШАПКА САЙТА */
+
+.page-header {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 70px 0;
+
+  background-color: #fff;
+}
+
+.logo {
+  margin-right: 28px;
+  margin-bottom: -6px;
+}
+
+.logo-pic {
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+
+.navigation {
+  margin-right: auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  padding: 20px 16px;
+}
+
+.user-menu {
+  width: 268px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.likes {
+  margin-right: 20px;
+  background-image: url("../images/svg-icons/like.svg");
+}
+
+.search {
+  background-image: url("../images/svg-icons/search.svg");
+}
+
+.search,
+.likes {
+  width: 44px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+
+  border-radius: 4px;
+  background-color: #756157;
+}
+
+.page-header-button {
+  padding: 8px 34px;
+}
+
+/* ОСНОВНОЕ СОДЕРЖИМОЕ */
+
+.main-index,
+.main-inner {
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* ПРОМО-БЛОК */
+
+.hero {
+  min-height: 485px;
+  background-color: #83b3d333;
+  background-image: url("../images/hero-picture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.hero-pic-text {
+  margin-top: 51px;
+}
+
+/* ПРЕИМУЩЕСТВА */
+
+.advantages {
+  padding-top: 69px;
+}
+
+.advantages-title {
+  width: 620px;
+  margin: 0 auto 25px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages-description {
+  margin: 0 0 90px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333;
+  text-align: center;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+}
+
+.advantages-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 385px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:nth-child(3) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-wide {
+  grid-column: 1 / span 3;
+}
+
+.advantages-item:last-child .advantages-wrapper {
+  flex-direction: row-reverse;
+}
+
+.advantages-text-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  background-color: #82b3d3;
+  color: #fff;
+}
+
+.advantages-subtitle {
+  margin: 0 auto 60px;
+  width: 175px;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages-text {
+  width: 230px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* УСЛУГИ */
+
+.services {
+  padding-top: 64px;
+}
+
+.services-title {
+  margin: 0 auto 20px;
+  width: 505px;
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.services-subtitle {
+  margin: 0 auto 64px;
+  width: 491px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333;
+  text-align: center;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  min-height: 385px;
+}
+
+.services-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services-type {
+  margin: 0 0 30px;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.services-description {
+  width: 230px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+  text-align: center;
+}
+
+/* ПОИСК ОТЕЛЯ */
+
+.hotel-search {
+  padding: 96px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-search-title {
+  margin: 0 0 20px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hotel-search-description {
+  margin: 0 auto 54px;
+  width: 592px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333;
+  text-align: center;
+}
+
+.hotel-search-button {
+  margin: 0 auto;
+  padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* БЛОК С ПОДПИСКОЙ */
+
+.subscribe {
+  padding: 96px 0 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #82b3d3;
+  background-image: url("../images/subscribe-picture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe-title {
+  margin: 0 0 20px;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.subscribe-subtitle {
+  margin: 0 auto 54px;
+  width: 475px;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #fff;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 684px;
+}
+
+.subscribe-button {
+  padding: 8px 50px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82b3d3;
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.subscribe-email {
+  padding: 12px 20px;
+  flex-grow: 1;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+  background-color: #f2f2f2;
+}
+
+/* ПОДВАЛ САЙТА */
+
+.page-footer {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0 30px;
+
+  background-color: #fff;
+}
+
+/* КОНТАКТЫ */
+
+.contacts {
+  margin: 0 auto;
+  width: 1060px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+}
+
+.social-list {
+  width: 142px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-item {
+  display: flex;
+}
+
+.social-link {
+  width: 47px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-link-vk {
+  background-image: url("../images/svg-icons/social-vk.svg");
+}
+
+.social-link-tg {
+  background-image: url("../images/svg-icons/social-tg.svg");
+}
+
+.social-link-youtube {
+  background-image: url("../images/svg-icons/social-youtube.svg");
+}
+
+/* СТРАНИЦА КАТАЛОГА */
+
+.wrapper {
+  padding: 35px 0 70px;
+  background-color: #82b3d3;
+  background-image: url("../images/inner-header-picture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+/* БЛОК С ЗАГОЛОВКОМ И ХЛЕБНЫМИ КРОШКАМИ */
+
+.inner-header {
+  margin: 0 auto 40px;
+  width: 1060px;
+}
+
+.inner-header-title {
+  margin: 0 0 8px;
+  width: 1060px;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+}
+
+.breadcrumbs-link-index {
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/svg-icons/breadcrumb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+/* ФИЛЬТР ОТЕЛЕЙ */
+
+.hotels-filter {
+  margin: 0 auto;
+  width: 1060px;
+}
+
+.hotels-filter-form {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.hotels-filter-group {
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.type-hotel {
+  margin-right: 70px;
+}
+
+.hotels-filter-title {
+  margin: 0 0 32px;
+  font-weight: 700;
+  padding: 0;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.control {
+  margin-bottom: 16px;
+  line-height: 23px;
+  position: relative;
+}
+
+.control:last-child {
+  margin-bottom: 0;
+}
+
+.control input {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #f2f2f2;
+}
+
+.control-input-text {
+  color: #000;
+  line-height: 24px;
+  opacity: 0.3;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.range-input-wrapper {
+  margin-bottom: 36px;
+  display: flex;
+  gap: 2px;
+}
+
+.range-input-wrapper .control {
+  margin: 0;
+}
+
+.range-input-wrapper .control-input {
+  padding: 12px 20px;
+  width: 143px;
+  border: none;
+}
+
+.range-input-wrapper .control:first-child .control-input {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.range-input-wrapper .control:last-child .control-input {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.control-range {
+  margin: 0;
+}
+
+.filter-button-list {
+  margin: auto 0 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.filter-button,
+.filter-button-reset {
+  font-family: "PT Sans", "Arial", sans-serif;
+  padding: 8px 50px;
+  border: none;
+}
+
+.filter-button {
+  background-color: #82b3d3;
+}
+
+.filter-button-reset {
+  background-color: transparent;
+}
+
+/* КАТАЛОГ ОТЕЛЕЙ */
+
+.hotels-catalog {
+  margin: 0 auto;
+  padding: 50px 0 60px;
+  width: 1060px;
+}
+
+.hotel-catalog-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.hotels-catalog-result {
+  margin: 0 auto 0 0;
+  width: 338px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.select-control {
+  margin: 0 auto 0 0;
+  padding: 10px 20px;
+  width: 292px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  border-radius: 4px;
+  border: 2px solid #e5e5e5;
+}
+
+.select-control option {
+  padding: 14px 20px;
+}
+
+.select-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 160px;
+}
+
+.select-item {
+  display: flex;
+}
+
+.select-button {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.select-button-active {
+  border-color: #000;
+}
+
+.select-button-cards {
+  background-image: url("../images/svg-icons/select-icon-cards.svg");
+}
+
+.select-button-separate {
+  background-image: url("../images/svg-icons/select-icon-separate.svg");
+}
+
+.select-button-list {
+  background-image: url("../images/svg-icons/select-icon-list.svg");
+}
+
+.hotels-list {
+  margin: 0 0 80px;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+}
+
+.hotel-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 438px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.hotel-item-link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #000;
+  text-decoration: none;
+}
+
+.hotel-photo {
+  object-fit: cover;
+  width: 300px;
+  height: 212px;
+}
+
+.hotel-name {
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hotel-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hotel-type,
+.hotel-price {
+  color: #333;
+}
+
+.favourite-button,
+.favourite-button-active {
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.favourite-button {
+  background-color: #82b3d3;
+}
+
+.favourite-button-active {
+  background-color: #7db54f;
+}
+
+.star {
+  width: 140px;
+}
+
+.hotel-link,
+.favourite-button {
+  padding: 8px 26px;
+  border: none;
+}
+
+.favourite-button {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hotel-rating {
+  padding: 9px 22px 8px 23px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.pagination {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagination-item {
+  display: flex;
+}
+
+.pagination-link {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  background-color: #82b3d3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.pagination-link-current {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.pagination-link-show-all {
+  background-color: #fff;
+  color: #000;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+/* БЛОК С ПОДПИСКОЙ */
+
+.subscribe-inner {
+  background-image: none;
+  background-color: #fff;
+}
+
+.subscribe-inner .subscribe-title,
+.subscribe-inner .subscribe-subtitle {
+  color: #000;
+}
